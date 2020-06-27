@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login view</title>
+    <link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/webjars/jquery/3.1.1-1/jquery.js"></script>
+</head>
+<body>
+    <h1>Login</h1>
+    <button id="btnLogin" type="button"><img th:src="@{/kakao_login_medium_narrow.png}" alt="로그인버튼"></button>
+    <script>
+        $("#btnLogin").on("click", function(e) {
+            window.location.replace("https://kauth.kakao.com/oauth/authorize?client_id=b3dcc0196886d89c7d36599e2af9727a&redirect_uri=http://localhost:8080/main&response_type=code");
+        });
+    </script>
+</body>
+</html>
